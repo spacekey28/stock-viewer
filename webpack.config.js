@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './frontend/src/main.js',
   output: {
-    path: path.join(__dirname, '/frontend'),
-    filename: 'index_bundle.js',
+    path: path.join(__dirname, '/frontend/dist'),
+    filename: 'index.bundle.js',
   },
   devServer: {
     inline: true,
