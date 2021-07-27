@@ -5,7 +5,7 @@ module.exports = {
   entry: './frontend/src/main.js',
   output: {
     path: path.join(__dirname, '/frontend/dist'),
-    filename: 'index.bundle.js',
+    filename: 'index_bundle.js',
   },
   devServer: {
     inline: true,
