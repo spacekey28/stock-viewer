@@ -56,6 +56,7 @@ class App {
   }
 
   private initializeMiddlewares() {
+    this.app.use(express.static(path.resolve('./') + '/frontend/dist'));
     this.app.use(morgan(config.get('log.format'), { stream }));
     this.app.use(cors({ origin: config.get('cors.origin'), credentials: config.get('cors.credentials') }));
     this.app.use(hpp());
@@ -64,7 +65,6 @@ class App {
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(cookieParser());
-    this.app.use(express.static(path.resolve('./') + '/frontend/dist'));
   }
 
   private initializeRoutes(routes: Routes[]) {
