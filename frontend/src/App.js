@@ -5,7 +5,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Chart />
+        <Chart legendPosition="bottom" />
       </div>
     );
   }
