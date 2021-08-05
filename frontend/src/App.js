@@ -20,8 +20,8 @@ class App extends Component {
         datasets: [
           {
             label: 'Price',
-            data: [1010, 1083, 983, 849, 1283, 394, 923, 1003, 1011],
-            backgroundColor: ['red', 'blue', 'green', 'pink', 'black', 'orange', 'purple', 'yellow', 'white'],
+            data: [1010, 1083, 983, 849, 1283, 394, 923, 1003, 1011, 2020],
+            backgroundColor: ['red', 'blue', 'green', 'pink', 'black', 'orange', 'purple', 'yellow', 'white', 'lightblue'],
           },
         ],
       },
@@ -31,7 +31,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Chart chartData={this.state.chartData} legendPosition="bottom" />
+        <Chart chartData={this.state.chartData} location="LA" legendPosition="bottom" />
+        {/* <Chart chartData={this.state.chartData} location="New York" legendPosition="top" /> */}
       </div>
     );
   }

@@ -11,6 +11,7 @@ class Chart extends Component {
     displayTitle: true,
     displayLegend: true,
     legendPosition: 'right',
+    location: 'City',
   };
 
   render() {
@@ -21,7 +22,35 @@ class Chart extends Component {
           options={{
             title: {
               display: this.props.displayTitle,
-              text: 'Nasdaq Stock Chart',
+              text: 'Nasdaq Stock Chart in ' + this.props.location,
+              fontSize: 22,
+            },
+            legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition,
+            },
+          }}
+        />
+        <Line
+          data={this.state.chartData}
+          options={{
+            title: {
+              display: this.props.displayTitle,
+              text: 'Nasdaq Stock Chart in ' + this.props.location,
+              fontSize: 22,
+            },
+            legend: {
+              display: this.props.displayLegend,
+              position: this.props.legendPosition,
+            },
+          }}
+        />
+        <Pie
+          data={this.state.chartData}
+          options={{
+            title: {
+              display: this.props.displayTitle,
+              text: 'Nasdaq Stock Chart in ' + this.props.location,
               fontSize: 22,
             },
             legend: {
