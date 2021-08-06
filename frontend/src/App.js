@@ -10,6 +10,7 @@ class App extends Component {
   }
 
   componentWillMount() {
+    // getting chart data
     this.getChartData();
   }
 
@@ -32,7 +33,6 @@ class App extends Component {
     return (
       <div>
         <Chart chartData={this.state.chartData} location="LA" legendPosition="bottom" />
-        {/* <Chart chartData={this.state.chartData} location="New York" legendPosition="top" /> */}
       </div>
     );
   }
