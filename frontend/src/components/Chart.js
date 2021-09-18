@@ -18,7 +18,6 @@ class Chart extends Component {
   };
 
   componentDidMount() {
-    console.log(this.myRef);
     d3.select(this.myRef.current).append('p').text('Hello d3');
     let size = 500;
     let svg = d3.select(this.myRef.current).append('svg').attr('width', size).attr('height', size);
