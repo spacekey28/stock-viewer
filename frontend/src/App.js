@@ -9,7 +9,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     // getting chart data
     this.getChartData();
   }

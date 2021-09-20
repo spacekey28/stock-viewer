@@ -5,7 +5,9 @@ import * as d3 from 'd3';
 class Chart extends Component {
   constructor(props) {
     super(props);
-    this.state = props.chartData;
+    this.state = {
+      chartData: props.chartData,
+    };
     this.myRef = React.createRef();
     this.dataset = [100, 200, 300, 400, 500];
   }
